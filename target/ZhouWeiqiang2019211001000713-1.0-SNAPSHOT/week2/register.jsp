@@ -17,6 +17,8 @@
     </style>
 </head>
 <body>
+<%@include file="/header.jsp"%>
+This is my JSP page.<br>
 <h1>New User Registration</h1>
 <form method="post" action="/2019211001000713ZhouWeiqiang_war_exploded/Register">
     <table>
@@ -34,5 +36,6 @@
     <tr> <td></td><td><input type="submit" value="Register"/></td>  </tr>
     </table>
 </form>
+<%@include file="/footer.jsp"%>
 </body>
 </html>
