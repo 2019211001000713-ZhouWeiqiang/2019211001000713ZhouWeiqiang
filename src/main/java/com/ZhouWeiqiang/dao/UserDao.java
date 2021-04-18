@@ -89,7 +89,7 @@ public class UserDao implements IUserDao{
         pstmt.setString(1,username);
         ResultSet rs= pstmt.executeQuery();
         User user=null;
-        List<User> Lu=null
+        List<User> Lu=null;
         if(rs.next()){
             user=new User();
             user.setId(rs.getInt("id"));
@@ -110,7 +110,7 @@ public class UserDao implements IUserDao{
         pstmt.setString(1,password);
         ResultSet rs= pstmt.executeQuery();
         User user=null;
-        List<User> Lu=null
+        List<User> Lu=null;
         if(rs.next()){
             user=new User();
             user.setId(rs.getInt("id"));
@@ -131,7 +131,7 @@ public class UserDao implements IUserDao{
         pstmt.setString(1,email);
         ResultSet rs= pstmt.executeQuery();
         User user=null;
-        List<User> Lu=null
+        List<User> Lu=null;
         if(rs.next()){
             user=new User();
             user.setId(rs.getInt("id"));
@@ -152,7 +152,7 @@ public class UserDao implements IUserDao{
         pstmt.setString(1,gender);
         ResultSet rs= pstmt.executeQuery();
         User user=null;
-        List<User> Lu=null
+        List<User> Lu=null;
         if(rs.next()){
             user=new User();
             user.setId(rs.getInt("id"));
@@ -173,7 +173,7 @@ public class UserDao implements IUserDao{
         pstmt.setDate(1, (java.sql.Date) birthDate);
         ResultSet rs= pstmt.executeQuery();
         User user=null;
-        List<User> Lu=null
+        List<User> Lu=null;
         if(rs.next()){
             user=new User();
             user.setId(rs.getInt("id"));
@@ -193,7 +193,7 @@ public class UserDao implements IUserDao{
         PreparedStatement pstmt= con.prepareStatement(sql);
         ResultSet rs= pstmt.executeQuery();
         User user=null;
-        List<User> Lu=null
+        List<User> Lu=null;
         if(rs.next()){
             user=new User();
             user.setId(rs.getInt("id"));
