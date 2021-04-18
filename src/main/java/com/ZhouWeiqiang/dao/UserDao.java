@@ -16,7 +16,7 @@ public class UserDao implements IUserDao{
         String sql="insert into Usertable values(?,?,?,?,?)";
         PreparedStatement pstmt= con.prepareStatement(sql);
         pstmt.setString(1,user.getUsernamne());
-        pstmt.setString(2,user.getPassword();
+        pstmt.setString(2,user.getPassword());
         pstmt.setString(3,user.getEmail());
         pstmt.setString(4,user.getGender());
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
