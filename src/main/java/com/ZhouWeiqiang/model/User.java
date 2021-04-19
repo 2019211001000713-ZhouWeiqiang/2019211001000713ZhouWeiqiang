@@ -63,7 +63,7 @@ public class User {
         this.gender = gender;
     }
 
-    public Date getBirthdate() {
+    public java.sql.Date getBirthdate() {
         return birthdate;
     }
 

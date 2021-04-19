@@ -36,9 +36,14 @@ public class UserDao implements IUserDao{
 
     @Override
     public int updateUser(Connection con, User user) throws SQLException {
-        String sql="update Usertable set id=?";
+        String sql="update Usertable set username=?,password=?,email=?,gender=?,birthdate=? where id=?";
         PreparedStatement pstmt= con.prepareStatement(sql);
-        pstmt.setInt(1,user.getId());
+        pstmt.setString(1,user.getUsernamne());
+        pstmt.setString(2,user.getPassword());
+        pstmt.setString(3,user.getEmail());
+        pstmt.setString(4,user.getGender());
+        pstmt.setDate(5,user.getBirthdate());
+        pstmt.setInt(6,user.getId());
         return pstmt.executeUpdate();
     }
 
@@ -89,7 +94,7 @@ public class UserDao implements IUserDao{
         pstmt.setString(1,username);
         ResultSet rs= pstmt.executeQuery();
         User user=null;
-        List<User> Lu=null;
+        List<User> Lu=new ArrayList<User>();
         if(rs.next()){
             user=new User();
             user.setId(rs.getInt("id"));
@@ -110,7 +115,7 @@ public class UserDao implements IUserDao{
         pstmt.setString(1,password);
         ResultSet rs= pstmt.executeQuery();
         User user=null;
-        List<User> Lu=null;
+        List<User> Lu=new ArrayList<User>();
         if(rs.next()){
             user=new User();
             user.setId(rs.getInt("id"));
@@ -131,7 +136,7 @@ public class UserDao implements IUserDao{
         pstmt.setString(1,email);
         ResultSet rs= pstmt.executeQuery();
         User user=null;
-        List<User> Lu=null;
+        List<User> Lu=new ArrayList<User>();
         if(rs.next()){
             user=new User();
             user.setId(rs.getInt("id"));
@@ -152,7 +157,7 @@ public class UserDao implements IUserDao{
         pstmt.setString(1,gender);
         ResultSet rs= pstmt.executeQuery();
         User user=null;
-        List<User> Lu=null;
+        List<User> Lu=new ArrayList<User>();
         if(rs.next()){
             user=new User();
             user.setId(rs.getInt("id"));
@@ -173,7 +178,7 @@ public class UserDao implements IUserDao{
         pstmt.setDate(1, (java.sql.Date) birthDate);
         ResultSet rs= pstmt.executeQuery();
         User user=null;
-        List<User> Lu=null;
+        List<User> Lu=new ArrayList<User>();
         if(rs.next()){
             user=new User();
             user.setId(rs.getInt("id"));
@@ -193,7 +198,7 @@ public class UserDao implements IUserDao{
         PreparedStatement pstmt= con.prepareStatement(sql);
         ResultSet rs= pstmt.executeQuery();
         User user=null;
-        List<User> Lu=null;
+        List<User> Lu=new ArrayList<User>();
         if(rs.next()){
             user=new User();
             user.setId(rs.getInt("id"));
