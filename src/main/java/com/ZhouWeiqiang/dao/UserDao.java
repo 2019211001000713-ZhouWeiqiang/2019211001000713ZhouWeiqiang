@@ -42,7 +42,7 @@ public class UserDao implements IUserDao{
         pstmt.setString(2,user.getPassword());
         pstmt.setString(3,user.getEmail());
         pstmt.setString(4,user.getGender());
-        pstmt.setDate(5,user.getBirthdate());
+        pstmt.setDate(5,(java.sql.Date)user.getBirthdate());
         pstmt.setInt(6,user.getId());
         return pstmt.executeUpdate();
     }
