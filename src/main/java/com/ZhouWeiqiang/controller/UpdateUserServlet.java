@@ -30,7 +30,6 @@ public class UpdateUserServlet extends HttpServlet {
         try {
             SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
             Date Date=sdf.parse(request.getParameter("Date"));
-            System.out.println(Date);
             User user=new User();
             user.setId(Id);
             user.setUsername(Username);
