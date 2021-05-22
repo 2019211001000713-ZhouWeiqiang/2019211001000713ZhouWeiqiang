@@ -52,13 +52,12 @@
 							<td class="cart_description">
 								<p >birthDate</p>
 							</td>
-							
+
 							<td class="cart_delete">
 							   <a class="cart_quantity_update" href="<%=basePath %>admin/userEdit?userId=id" ><i class="fa fa-edit"></i></a>
 								<a class="cart_quantity_delete" href="<%=basePath%>admin/userDelete?userId=id" ><i class="fa fa-times"></i></a>
 							</td>
 						</tr>
-						</c:forEach>
 						<!-- loop_end -->
 		</tbody>
 		</table>
